@@ -1,7 +1,7 @@
 import React from "react";
-import "./Login.scss";
+import "./Register.scss";
 import { Link } from "react-router-dom";
-const Login = () => {
+const Register = () => {
   return (
     <div className="login-container mt-3">
       <div className="container">
@@ -22,6 +22,22 @@ const Login = () => {
               />
             </div>
             <div>
+              <label>Phone Number:</label>
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Enter phone number"
+              />
+            </div>
+            <div>
+              <label>User Name:</label>
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Enter username"
+              />
+            </div>
+            <div>
               <label>Password:</label>
               <input
                 className="form-control"
@@ -29,13 +45,20 @@ const Login = () => {
                 placeholder="Enter password"
               />
             </div>
+            <div>
+              <label>Re-enter password:</label>
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Re-enter password"
+              />
+            </div>
+            <button className="btn btn-primary">Register</button>
 
-            <button className="btn btn-primary">log in</button>
-            <a className="text-center" href="#">
-              forget password ?
-            </a>
             <hr />
-            <Link to="/register" className="btn btn-success">Create account</Link>
+            <Link to="/login" className="btn btn-success">
+              Already've an account. Login
+            </Link>
           </div>
         </div>
       </div>
@@ -43,4 +66,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
